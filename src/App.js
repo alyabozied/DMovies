@@ -1,15 +1,9 @@
 import React from 'react';
 import './App.css';
-import database from './config/firebaseConfig';
-const movielist =  database.collection("movies-list");
-
+import {getMovies} from './utility/movies.js';
 
 function App() { 
-  movielist.get().then((d)=>{
-    d.docs.forEach(doc=>{
-      console.log(doc.data());
-    });
-  })
+
   return (
     <main className = "container" >
     </main>
