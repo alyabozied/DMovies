@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './App.css';
-import {getMovies,findMovie} from './utility/movies.js';
-
-function App() { 
-findMovie(4).then(d=>{
-  console.log(d);
-})
-  return (
-    <main className = "container" >
-    </main>
-  );
+import MoviesList from "./components/movies"
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+       <MoviesList/>
+      </div>
+    );
+  }
 }
+
 export default App;
