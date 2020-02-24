@@ -8,6 +8,6 @@ export async function getMovies(){
 }
 
 export async function findMovie(id){
-      let  movies = await database.collection('movies-list').where('_id','==',id).get();
-      return movies.docs.map(doc=>doc.data())[0];
+      let  movie = await database.collection('movies-list').doc(id).get();
+      console.log(movie.data());
 }
