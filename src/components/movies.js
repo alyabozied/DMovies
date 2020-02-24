@@ -12,12 +12,24 @@ export class MoviesList extends Component {
         })
     }
     
-     handleDelete =(movie)=> {
+    handleDelete =(movie)=> {
         console.log(movie);
         const movies = this.state.movies.filter(m=>m.ID!==movie.ID);
         this.setState({movies});
      }
-        
+     handleIncrement =  (id)=> {
+        let movies = this.state.movies;
+        var i = movies.findIndex(m => m.ID === id);
+        movies[i].numberInStock++;
+        this.setState({movies})
+    }
+    handleDecrement =  (id)=> {
+        let movies = this.state.movies;
+        var i = movies.findIndex(m => m.ID === id);
+        if(movies[i].numberInStock)
+            {movies[i].numberInStock--;
+            this.setState({movies})}
+    }  
     
     
     render() {
@@ -35,11 +47,11 @@ export class MoviesList extends Component {
                 </thead>
                 <tbody>
                 {this.state.movies.map(movie=> (
-                        <tr  key={movie.ID}>
+                        <tr  key={movie.ID} className={(movie.numberInStock) ? "" : "table-danger"}>
                             <th scope="row" className="text-left">{movie.title}</th>
                             <td>{movie.genre.name}</td>
                             <td>{movie.publishYear}</td>
-                            <td><Counter stock ={movie.numberInStock}/></td>
+                            <td><Counter id ={movie.ID} stock ={movie.numberInStock} increment ={this.handleIncrement} decrement ={this.handleDecrement}/></td>
                             <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">Delete</button></td>
                         </tr>
                     ))}
