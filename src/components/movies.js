@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {getMovies} from '../utility/movies';
-
+import Counter from './counter'
 export class MoviesList extends Component {
     constructor() {
         super();
@@ -39,7 +39,7 @@ export class MoviesList extends Component {
                             <th scope="row" className="text-left">{movie.title}</th>
                             <td>{movie.genre.name}</td>
                             <td>{movie.publishYear}</td>
-                            <td>{movie.numberInStock}</td>
+                            <td><Counter stock ={movie.numberInStock}/></td>
                             <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">Delete</button></td>
                         </tr>
                     ))}
