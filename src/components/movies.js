@@ -5,7 +5,7 @@ export class MoviesList extends Component {
     constructor() {
         super();
         this.state = {
-            movies: [{title:"",genre:{name:""},publishYear:"",numberInStock:""}]
+            movies: []
         }
         this.movies = getMovies().then(snapShot=>{
            this.setState({movies : snapShot});
