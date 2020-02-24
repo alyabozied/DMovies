@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/DMovies/static/css/main.80663e25.chunk.css",
+    "main.js": "/DMovies/static/js/main.8ece3f9d.chunk.js",
+    "main.js.map": "/DMovies/static/js/main.8ece3f9d.chunk.js.map",
+    "runtime-main.js": "/DMovies/static/js/runtime-main.4f74162f.js",
+    "runtime-main.js.map": "/DMovies/static/js/runtime-main.4f74162f.js.map",
+    "static/css/2.b81190d2.chunk.css": "/DMovies/static/css/2.b81190d2.chunk.css",
+    "static/js/2.f0acd8e3.chunk.js": "/DMovies/static/js/2.f0acd8e3.chunk.js",
+    "static/js/2.f0acd8e3.chunk.js.map": "/DMovies/static/js/2.f0acd8e3.chunk.js.map",
+    "index.html": "/DMovies/index.html",
+    "precache-manifest.2f1fd35fd3ebdb7529f484b9170bb558.js": "/DMovies/precache-manifest.2f1fd35fd3ebdb7529f484b9170bb558.js",
+    "service-worker.js": "/DMovies/service-worker.js",
+    "static/css/2.b81190d2.chunk.css.map": "/DMovies/static/css/2.b81190d2.chunk.css.map",
+    "static/css/main.80663e25.chunk.css.map": "/DMovies/static/css/main.80663e25.chunk.css.map",
+    "static/js/2.f0acd8e3.chunk.js.LICENSE.txt": "/DMovies/static/js/2.f0acd8e3.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/DMovies/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f74162f.js",
+    "static/css/2.b81190d2.chunk.css",
+    "static/js/2.f0acd8e3.chunk.js",
+    "static/css/main.80663e25.chunk.css",
+    "static/js/main.8ece3f9d.chunk.js"
+  ]
+}
