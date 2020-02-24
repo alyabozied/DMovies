@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import {getMovies} from '../utility/movies';
+import {getMovies , findMovie , addMovie} from '../utility/movies';
 import Counter from './counter'
+import MovieInput from './movieinput'
 export class MoviesList extends Component {
     constructor() {
         super();

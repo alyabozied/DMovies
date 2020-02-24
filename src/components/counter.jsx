@@ -13,7 +13,7 @@ export class Counter extends Component {
         let classes = "badge badge-"
         classes += (this.props.stock) ? "light" : "danger";
         return (
-            <div>
+            <div className>
                 
                 
                 <div className="btn-group " role="group">
