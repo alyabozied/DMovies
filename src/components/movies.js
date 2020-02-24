@@ -11,10 +11,16 @@ export class MoviesList extends Component {
            this.setState({movies : snapShot});
         })
     }
- 
+    
+     handleDelete =(movie)=> {
+        console.log(movie);
+        const movies = this.state.movies.filter(m=>m.ID!==movie.ID);
+        this.setState({movies});
+     }
+        
+    
     
     render() {
-        console.log(this.state);
         return (
             <div className="container">
                 <table className="table table-dark table-hover mx-auto">
@@ -24,15 +30,17 @@ export class MoviesList extends Component {
                     <th scope="col">Genre</th>
                     <th scope="col">Publish Year</th>
                     <th scope="col">In Stock</th>
+                    <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                 {this.state.movies.map(movie=> (
-                        <tr>
+                        <tr  key={movie.ID}>
                             <th scope="row" className="text-left">{movie.title}</th>
                             <td>{movie.genre.name}</td>
                             <td>{movie.publishYear}</td>
                             <td>{movie.numberInStock}</td>
+                            <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
