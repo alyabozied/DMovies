@@ -11,7 +11,6 @@ class App extends Component {
            <p className=" subtext badge badge-sm badge-light text-primary">BETA</p>
         </div>
        <MoviesList/>
-       <MovieInput/>
       </div>
     );
   }

@@ -20,7 +20,10 @@ body {
   width: 100%;
 }
 #float-right {
-  float: right;
+  width: 20%;
+}
+#float-left {
+  width: 80%;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

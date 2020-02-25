@@ -31,10 +31,14 @@ export class MoviesList extends Component {
             {movies[i].numberInStock--;
             this.setState({movies})}
     }  
-    
-    
+    handleAddMovie = (movie)=>{
+        let movies = this.state.movies;
+        movies.push( movie);
+       this.setState({movies});
+    }
     render() {
         return (
+            <React.Fragment>
             <div className="container">
                 <table className="table table-dark table-hover mx-auto">
                 <thead>
@@ -50,7 +54,7 @@ export class MoviesList extends Component {
                 {this.state.movies.map(movie=> (
                         <tr  key={movie.ID} className={(movie.numberInStock) ? "" : "table-danger"}>
                             <th scope="row" className="text-left">{movie.title}</th>
-                            <td>{movie.genre.name}</td>
+                            <td>{movie.genre}</td>
                             <td>{movie.publishYear}</td>
                             <td><Counter id ={movie.ID} stock ={movie.numberInStock} increment ={this.handleIncrement} decrement ={this.handleDecrement}/></td>
                             <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">Delete</button></td>
@@ -59,6 +63,8 @@ export class MoviesList extends Component {
                 </tbody>
                 </table>
             </div>
+              <MovieInput handleAddMovie={this.handleAddMovie}/>
+              </React.Fragment>
         )
     }
 }
