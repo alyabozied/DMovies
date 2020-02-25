@@ -32,15 +32,18 @@ export class MoviesList extends Component {
             this.setState({movies})}
     }  
     handleAddMovie = (movie)=>{
+        let movieID = {...movie , ID: this.state.movies.length};
+        console.log(movieID);
         let movies = this.state.movies;
-        movies.push( movie);
+        movies.push( movieID);
+        
        this.setState({movies});
     }
     render() {
         return (
             <React.Fragment>
             <div className="container">
-                <table className="table table-dark table-hover mx-auto">
+                <table className="table table-hover mx-auto">
                 <thead>
                     <tr>
                     <th scope="col" className="text-left">Title</th>
