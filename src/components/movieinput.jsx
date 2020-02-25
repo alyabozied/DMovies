@@ -13,7 +13,6 @@ export class MovieInput extends Component {
         const re = /^[0-9\b]+$/;
         if(re.test(this.state.numberInStock) && re.test(this.state.publishYear) )
         {
-            console.log(this.state);
             this.setState({title:"",publishYear:"",numberInStock:"",genre:""});
             this.props.handleAddMovie(this.state);
         }

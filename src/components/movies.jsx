@@ -14,10 +14,10 @@ export class MoviesList extends Component {
     }
     
     handleDelete =(movie)=> {
-        console.log(movie);
-        deleteMovie(movie.ID);
-        const movies = this.state.movies.filter(m=>m.ID!==movie.ID);
-        this.setState({movies});
+            deleteMovie(movie.ID).then(()=>{
+            const movies = this.state.movies.filter(m=>m.ID!==movie.ID);
+            this.setState({movies});
+        })
      }
      handleIncrement =  (id)=> {
         let movies = this.state.movies;
@@ -33,26 +33,27 @@ export class MoviesList extends Component {
             this.setState({movies})}
     }  
     handleAddMovie = (movie)=>{
-        let movieID = {...movie , ID: this.state.movies.length};
-        console.log(movieID);
-        let foundMovie =this.state.movies.filter(m=>(m.title===movieID.title && m.publishYear===movieID.publishYear ))
+        let foundMovie =this.state.movies.filter(m=>(m.title===movie.title && m.publishYear===movie.publishYear ))
         if(foundMovie.length)
         {
            this.handleIncrement(foundMovie[0].ID);
         }
         else{
-            let movies = this.state.movies;
-            movies.push( movieID);
-            this.setState({movies});
+            addMovie(movie).then((snapShot)=>{
+                let movies = this.state.movies;
+                movies.push( {...movie,ID :snapShot.id});
+                this.setState({movies});
+            })
+            
         }
         
     }
     handleReset()
     {
-        console.log("reset");
         reset().then(()=>{
+            console.log("reset");
             this.movies = getMovies().then(snapShot=>{
-                this.setState({movies : snapShot});
+            this.setState({movies : snapShot});
              })
         });
     }
