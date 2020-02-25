@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/DMovies/static/css/main.9bd53cf8.chunk.css",
-    "main.js": "/DMovies/static/js/main.47042f9d.chunk.js",
-    "main.js.map": "/DMovies/static/js/main.47042f9d.chunk.js.map",
+    "main.js": "/DMovies/static/js/main.0917ca32.chunk.js",
+    "main.js.map": "/DMovies/static/js/main.0917ca32.chunk.js.map",
     "runtime-main.js": "/DMovies/static/js/runtime-main.4f74162f.js",
     "runtime-main.js.map": "/DMovies/static/js/runtime-main.4f74162f.js.map",
     "static/css/2.9f023812.chunk.css": "/DMovies/static/css/2.9f023812.chunk.css",
-    "static/js/2.5adab27c.chunk.js": "/DMovies/static/js/2.5adab27c.chunk.js",
-    "static/js/2.5adab27c.chunk.js.map": "/DMovies/static/js/2.5adab27c.chunk.js.map",
+    "static/js/2.bcf5e272.chunk.js": "/DMovies/static/js/2.bcf5e272.chunk.js",
+    "static/js/2.bcf5e272.chunk.js.map": "/DMovies/static/js/2.bcf5e272.chunk.js.map",
     "index.html": "/DMovies/index.html",
-    "precache-manifest.1d304d0185b0f5fb0b67f64b261f9884.js": "/DMovies/precache-manifest.1d304d0185b0f5fb0b67f64b261f9884.js",
+    "precache-manifest.cc459118a669238378eed92b1db39ca6.js": "/DMovies/precache-manifest.cc459118a669238378eed92b1db39ca6.js",
     "service-worker.js": "/DMovies/service-worker.js",
     "static/css/2.9f023812.chunk.css.map": "/DMovies/static/css/2.9f023812.chunk.css.map",
     "static/css/main.9bd53cf8.chunk.css.map": "/DMovies/static/css/main.9bd53cf8.chunk.css.map",
-    "static/js/2.5adab27c.chunk.js.LICENSE.txt": "/DMovies/static/js/2.5adab27c.chunk.js.LICENSE.txt",
+    "static/js/2.bcf5e272.chunk.js.LICENSE.txt": "/DMovies/static/js/2.bcf5e272.chunk.js.LICENSE.txt",
     "static/media/font-awesome.css": "/DMovies/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.4f74162f.js",
     "static/css/2.9f023812.chunk.css",
-    "static/js/2.5adab27c.chunk.js",
+    "static/js/2.bcf5e272.chunk.js",
     "static/css/main.9bd53cf8.chunk.css",
-    "static/js/main.47042f9d.chunk.js"
+    "static/js/main.0917ca32.chunk.js"
   ]
 }
