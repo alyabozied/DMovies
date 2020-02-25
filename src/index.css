@@ -9,7 +9,19 @@ body {
 .container {
   width: 80%;
 }
-
+.fixed-bar{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+#footer{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+#float-right {
+  float: right;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
