@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getMovies , findMovie , addMovie,reset} from '../utility/movies';
+import {getMovies , findMovie , addMovie,deleteMovie,reset} from '../utility/movies';
 import Counter from './counter'
 import MovieInput from './movieinput'
 export class MoviesList extends Component {
@@ -15,6 +15,7 @@ export class MoviesList extends Component {
     
     handleDelete =(movie)=> {
         console.log(movie);
+        deleteMovie(movie.ID);
         const movies = this.state.movies.filter(m=>m.ID!==movie.ID);
         this.setState({movies});
      }

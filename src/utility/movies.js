@@ -11,6 +11,10 @@ export async function findMovie(id){
       let  movie = await database.collection('movies-list').doc(id).get();
       console.log(movie.data());
 } 
+export async function deleteMovie(id){
+      return await database.collection('movies-list').doc(id).delete();
+      
+} 
 export async function addMovie(movie)
 {
       return database.collection('movies-list').add(movie);
