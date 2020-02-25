@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getMovies , findMovie , addMovie} from '../utility/movies';
+import {getMovies , findMovie , addMovie,reset} from '../utility/movies';
 import Counter from './counter'
 import MovieInput from './movieinput'
 export class MoviesList extends Component {
@@ -46,6 +46,15 @@ export class MoviesList extends Component {
         }
         
     }
+    handleReset()
+    {
+        console.log("reset");
+        reset().then(()=>{
+            this.movies = getMovies().then(snapShot=>{
+                this.setState({movies : snapShot});
+             })
+        });
+    }
     render() {
         return (
             <React.Fragment>
@@ -57,7 +66,7 @@ export class MoviesList extends Component {
                     <th scope="col">Genre</th>
                     <th scope="col">Publish Year</th>
                     <th scope="col">In Stock</th>
-                    <th scope="col"></th>
+                    <th scope="col"><button onClick={()=>(this.handleReset())} className="btn btn-success btn-sm">RESET</button></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,7 +76,7 @@ export class MoviesList extends Component {
                             <td>{movie.genre}</td>
                             <td>{movie.publishYear}</td>
                             <td><Counter id ={movie.ID} stock ={movie.numberInStock} increment ={this.handleIncrement} decrement ={this.handleDecrement}/></td>
-                            <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">Delete</button></td>
+                            <td><button onClick={()=>(this.handleDelete(movie))} className="btn btn-danger btn-sm">DELETE</button></td>
                         </tr>
                     ))}
                 </tbody>
