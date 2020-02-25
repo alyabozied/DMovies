@@ -34,10 +34,17 @@ export class MoviesList extends Component {
     handleAddMovie = (movie)=>{
         let movieID = {...movie , ID: this.state.movies.length};
         console.log(movieID);
-        let movies = this.state.movies;
-        movies.push( movieID);
+        let foundMovie =this.state.movies.filter(m=>(m.title===movieID.title && m.publishYear===movieID.publishYear ))
+        if(foundMovie.length)
+        {
+           this.handleIncrement(foundMovie[0].ID);
+        }
+        else{
+            let movies = this.state.movies;
+            movies.push( movieID);
+            this.setState({movies});
+        }
         
-       this.setState({movies});
     }
     render() {
         return (
