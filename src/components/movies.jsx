@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getMovies , findMovie , addMovie,deleteMovie,reset} from '../utility/movies';
+import {getMovies , findMovie , addMovie,deleteMovie,reset,clear} from '../utility/movies';
 import Counter from './counter'
 import MovieInput from './movieinput'
 export class MoviesList extends Component {
@@ -50,11 +50,13 @@ export class MoviesList extends Component {
     }
     handleReset()
     {
-        reset().then(()=>{
-            console.log("reset");
-            this.movies = getMovies().then(snapShot=>{
-            this.setState({movies : snapShot});
-             })
+        clear().then(()=>{
+            reset().then(()=>{
+                this.movies = getMovies().then(snapShot=>{
+                    console.log("Added")
+                    this.setState({movies : snapShot});
+                     })
+            })
         });
     }
     render() {
