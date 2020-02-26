@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e46d36bd1d4706c2d7bdb07c6bfcfb0b",
+    "revision": "474a67afd2fc35f565667579ffd0df46",
     "url": "/DMovies/index.html"
   },
   {
-    "revision": "d51ecee72b8e99bbaed0",
+    "revision": "b664a1277ac454e2a6bf",
     "url": "/DMovies/static/css/2.9f023812.chunk.css"
   },
   {
-    "revision": "bb95d59caca7439dffb2",
+    "revision": "ffff9e3df03553a14902",
     "url": "/DMovies/static/css/main.9bd53cf8.chunk.css"
   },
   {
-    "revision": "d51ecee72b8e99bbaed0",
-    "url": "/DMovies/static/js/2.bcf5e272.chunk.js"
+    "revision": "b664a1277ac454e2a6bf",
+    "url": "/DMovies/static/js/2.3bbfcb93.chunk.js"
   },
   {
     "revision": "7f84d11092c10d3a43893d78f68c23cb",
-    "url": "/DMovies/static/js/2.bcf5e272.chunk.js.LICENSE.txt"
+    "url": "/DMovies/static/js/2.3bbfcb93.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bb95d59caca7439dffb2",
-    "url": "/DMovies/static/js/main.0917ca32.chunk.js"
+    "revision": "ffff9e3df03553a14902",
+    "url": "/DMovies/static/js/main.709b7376.chunk.js"
   },
   {
     "revision": "70347d5f2fd9ec45687d",
